@@ -12,28 +12,28 @@ body {
     line-height: 1.6;
 }
 
-/* --- 2. STRUCTURE PRINCIPALE (LE CONTENEUR) --- */
+/* --- 2. STRUCTURE PRINCIPALE --- */
 .container {
-    max-width: 1000px; /* On élargit un peu pour les 2 colonnes */
+    max-width: 1000px;
     margin: 40px auto;
     background: #fff;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     border-radius: 8px;
-    display: flex;       /* MAGIE : Met la sidebar et le contenu côte à côte */
-    overflow: hidden;    /* Pour que le fond de la sidebar respecte les bords arrondis */
+    overflow: hidden; /* Important pour les coins arrondis */
 }
 
-/* --- 3. COLONNE DE GAUCHE (SIDEBAR) --- */
-.sidebar {
-    width: 32%; 
-    background-color: #f0f4f8; /* Fond légèrement grisé pour la démarquer */
-    padding: 40px 25px;
-    border-right: 1px solid #e1e8ed;
+/* --- 3. EN-TÊTE GLOBAL (PHOTO + NOM) --- */
+.top-header {
+    display: flex; /* Aligne la photo et le texte côte à côte */
 }
 
-.profile-pic-container {
-    text-align: center;
-    margin-bottom: 30px;
+.header-photo {
+    width: 32%; /* Même largeur que la sidebar */
+    background-color: #f0f4f8; /* Même fond que la sidebar */
+    padding: 40px 25px 10px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .profile-pic {
@@ -45,65 +45,101 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-.sidebar h3 {
-    color: #0056b3;
-    font-size: 1.1em;
-    text-transform: uppercase;
-    border-bottom: 2px solid #d1e0f0;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-    margin-top: 25px;
-}
-
-.sidebar ul {
-    list-style-type: none; /* Pas de points noirs dans la sidebar pour un look plus moderne */
-}
-
-.sidebar ul li {
-    margin-bottom: 10px;
-    font-size: 0.95em;
-}
-
-/* --- 4. COLONNE DE DROITE (CONTENU PRINCIPAL) --- */
-.main-content {
+.header-text {
     width: 68%;
-    padding: 40px;
+    padding: 40px 40px 10px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-header {
-    border-bottom: 2px solid #0056b3;
-    padding-bottom: 20px;
-    margin-bottom: 25px;
-}
-
-header h1 {
+.header-text h1 {
     font-size: 2.6em;
     color: #0056b3;
     line-height: 1.1;
     margin-bottom: 5px;
+    text-transform: uppercase;
 }
 
-header h2 {
+.header-text h2 {
     font-weight: 300;
     color: #666;
     font-size: 1.3em;
 }
 
-/* Style des sections dans la partie principale */
-.main-content section {
-    margin-bottom: 30px;
+.header-line {
+    border: none;
+    border-bottom: 2px solid #0056b3;
+    margin-top: 15px;
+    width: 100%;
 }
 
-.main-content h3 {
+/* --- 4. CORPS DU CV (2 COLONNES) --- */
+.cv-body {
+    display: flex;
+}
+
+.sidebar {
+    width: 32%;
+    background-color: #f0f4f8;
+    padding: 20px 25px 40px 25px;
+    border-right: 1px solid #e1e8ed;
+}
+
+.main-content {
+    width: 68%;
+    padding: 20px 40px 40px 40px;
+}
+
+/* --- 5. STYLES DES SECTIONS & TEXTES --- */
+
+/* Titres des sections */
+h3 {
     color: #0056b3;
+    font-size: 1.2em;
+    text-transform: uppercase;
     border-bottom: 1px solid #ccc;
     padding-bottom: 5px;
     margin-bottom: 15px;
-    font-size: 1.4em;
-    text-transform: uppercase;
+    margin-top: 20px;
 }
 
-/* Expériences et Formations */
+/* Les titres dans la sidebar n'ont pas de bordure ou une bordure différente */
+.sidebar h3 {
+    border-bottom: 2px solid #d1e0f0;
+    font-size: 1.1em;
+}
+
+/* Paragraphes justifiés */
+p {
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+/* Listes */
+ul {
+    list-style-position: outside;
+}
+
+.sidebar ul {
+    list-style-type: none; /* Pas de puces dans la sidebar */
+}
+
+.main-content ul {
+    margin-left: 25px;
+}
+
+.main-content ul li {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* Couleur des puces uniformisée */
+ul li::marker {
+    color: #333;
+}
+
+/* Éléments d'expérience/formation */
 .item {
     margin-bottom: 20px;
 }
@@ -122,36 +158,56 @@ header h2 {
 
 .date {
     font-style: italic;
-    color: #777;
+    color: #0056b3; /* Bleu pour les dates */
+    font-weight: bold;
     font-size: 0.9em;
-    text-align: right;
 }
 
-/* --- 5. ALIGNEMENT DES TEXTES ET PUCES --- */
-
-/* Justification du texte (Profil / Présentation) */
-p {
-    text-align: justify;
-    margin-bottom: 10px;
-}
-
-/* Aligne les puces de la partie principale proprement */
-.main-content ul {
-    margin-left: 25px;
-}
-
-.main-content ul li {
-    margin-bottom: 5px;
-    color: #555;
-}
-
-/* Uniformisation des puces */
-ul li::marker {
-    color: #333;
-}
-
+/* Précisions de niveaux (Compétences) */
 .skill-level {
-    font-size: 0.85em;  /* Rend le texte un peu plus petit */
-    color: #666;        /* Met le texte en gris */
-    font-style: italic; /* Met le texte en italique */
+    font-size: 0.85em;
+    color: #666;
+    font-style: italic;
+    display: block; /* Force le passage à la ligne */
+    margin-bottom: 5px;
+}
+
+/* --- 6. RESPONSIVE (TÉLÉPHONE) --- */
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 10px;
+    }
+
+    /* On empile tout verticalement */
+    .top-header, .cv-body {
+        flex-direction: column;
+    }
+
+    .header-photo, .header-text, .sidebar, .main-content {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .header-photo {
+        padding-top: 30px;
+    }
+
+    .header-text {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .sidebar {
+        border-right: none;
+        border-bottom: 2px solid #e1e8ed;
+    }
+
+    .item-header {
+        flex-direction: column; /* Date sous le titre sur mobile */
+    }
+
+    .date {
+        text-align: left;
+        margin-top: 2px;
+    }
 }
