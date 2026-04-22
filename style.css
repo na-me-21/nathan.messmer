@@ -1,0 +1,157 @@
+/* --- 1. BASES & RÉINITIALISATION --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- 2. STRUCTURE PRINCIPALE (LE CONTENEUR) --- */
+.container {
+    max-width: 1000px; /* On élargit un peu pour les 2 colonnes */
+    margin: 40px auto;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    display: flex;       /* MAGIE : Met la sidebar et le contenu côte à côte */
+    overflow: hidden;    /* Pour que le fond de la sidebar respecte les bords arrondis */
+}
+
+/* --- 3. COLONNE DE GAUCHE (SIDEBAR) --- */
+.sidebar {
+    width: 32%; 
+    background-color: #f0f4f8; /* Fond légèrement grisé pour la démarquer */
+    padding: 40px 25px;
+    border-right: 1px solid #e1e8ed;
+}
+
+.profile-pic-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #0056b3;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.sidebar h3 {
+    color: #0056b3;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    border-bottom: 2px solid #d1e0f0;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+
+.sidebar ul {
+    list-style-type: none; /* Pas de points noirs dans la sidebar pour un look plus moderne */
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+    font-size: 0.95em;
+}
+
+/* --- 4. COLONNE DE DROITE (CONTENU PRINCIPAL) --- */
+.main-content {
+    width: 68%;
+    padding: 40px;
+}
+
+header {
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-size: 2.6em;
+    color: #0056b3;
+    line-height: 1.1;
+    margin-bottom: 5px;
+}
+
+header h2 {
+    font-weight: 300;
+    color: #666;
+    font-size: 1.3em;
+}
+
+/* Style des sections dans la partie principale */
+.main-content section {
+    margin-bottom: 30px;
+}
+
+.main-content h3 {
+    color: #0056b3;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+    text-transform: uppercase;
+}
+
+/* Expériences et Formations */
+.item {
+    margin-bottom: 20px;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 5px;
+}
+
+.item-header h4 {
+    font-size: 1.1em;
+    color: #222;
+}
+
+.date {
+    font-style: italic;
+    color: #777;
+    font-size: 0.9em;
+    text-align: right;
+}
+
+/* --- 5. ALIGNEMENT DES TEXTES ET PUCES --- */
+
+/* Justification du texte (Profil / Présentation) */
+p {
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+/* Aligne les puces de la partie principale proprement */
+.main-content ul {
+    margin-left: 25px;
+}
+
+.main-content ul li {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* Uniformisation des puces */
+ul li::marker {
+    color: #333;
+}
+
+.skill-level {
+    font-size: 0.85em;  /* Rend le texte un peu plus petit */
+    color: #666;        /* Met le texte en gris */
+    font-style: italic; /* Met le texte en italique */
+}
