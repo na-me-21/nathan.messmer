@@ -41,7 +41,7 @@ body {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #0056b3;
+    border: 3px solid #428bd9;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
@@ -161,6 +161,7 @@ ul li::marker {
     color: #0056b3; /* Bleu pour les dates */
     font-weight: bold;
     font-size: 0.9em;
+    text-align: right;
 }
 
 /* Précisions de niveaux (Compétences) */
@@ -170,6 +171,19 @@ ul li::marker {
     font-style: italic;
     display: block; /* Force le passage à la ligne */
     margin-bottom: 5px;
+}
+
+/* --- ALIGNEMENT DES DATES DANS LES LISTES (MÉTHODE PROPRE) --- */
+.list-with-dates li {
+    position: relative;   /* Sert de point d'ancrage pour la date */
+    padding-right: 90px;  /* Empêche le texte long d'aller s'écraser sous la date */
+    margin-bottom: 15px;
+}
+
+.list-with-dates .date {
+    position: absolute;   /* Fait "voler" la date au-dessus du reste */
+    top: 0px;             /* L'aligne parfaitement en haut de la puce */
+    right: 0px;           /* La colle tout au bout à droite */
 }
 
 /* --- 6. RESPONSIVE (TÉLÉPHONE) --- */
@@ -207,7 +221,7 @@ ul li::marker {
     }
 
     .date {
-        text-align: left;
+        text-align: right;
         margin-top: 2px;
     }
 }
