@@ -224,4 +224,55 @@ ul li::marker {
         text-align: right;
         margin-top: 2px;
     }
+    /* --- CENTRAGE GLOBAL POUR LE MOBILE --- */
+    
+    /* 1. Centre tout le contenu des colonnes */
+    .sidebar, .main-content {
+        text-align: center;
+    }
+
+    /* 2. Annule la justification du texte de présentation pour le centrer */
+    p {
+        text-align: center;
+    }
+
+    /* 3. Ramène les listes et les puces vers le centre */
+    .main-content ul, .sidebar ul {
+        margin-left: 0;
+        list-style-position: inside; /* Rapproche le point noir du texte centré */
+    }
+
+    /* 4. Centre les titres et les dates des expériences */
+    .item-header {
+        align-items: center; 
+    }
+    
+    .date {
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    /* 5. Réparation des puces et des dates pour les TIPE sur mobile */
+    .list-with-dates li {
+        padding-right: 0; 
+        list-style-type: none;  /* On cache le point par défaut */
+        display: flex;
+        flex-direction: column; /* On empile la date et le texte verticalement */
+        align-items: center;    /* On centre le tout */
+        margin-bottom: 25px;
+    }
+    
+    .list-with-dates .date {
+        position: static; 
+        order: -1;              /* On remonte la date AVANT le texte */
+        display: block;
+        margin-bottom: 8px;     /* Espace entre la date et le titre */
+    }
+
+    /* On supprime l'ancien code .date::after et on utilise ::before sur le texte */
+    .list-with-dates .li-text::before {
+        content: "• ";         /* Ajoute le point suivi d'un espace */
+        color: #333;           /* Couleur du point */
+        font-weight: bold;
+    }
 }
