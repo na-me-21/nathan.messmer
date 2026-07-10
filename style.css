@@ -186,7 +186,66 @@ ul li::marker {
     right: 0px;           /* La colle tout au bout à droite */
 }
 
-/* --- 6. RESPONSIVE (TÉLÉPHONE) --- */
+
+/* --- 6. BOUTONS DRAPEAUX & SYSTÈME DE TRADUCTION --- */
+
+/* Sécurité : permet au conteneur de se caler par rapport au CV */
+.container {
+    position: relative; 
+}
+
+/* Le style du conteneur des drapeaux */
+#lang-switch-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer; /* Indique que c'est cliquable */
+    z-index: 10;
+    display: flex;
+    gap: 10px; /* Espace entre les deux drapeaux s'ils étaient affichés */
+}
+
+/* Le style commun aux images de drapeaux */
+.lang-flag {
+    width: 30px; /* Ajustez la taille selon vos images */
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.2s; /* Petit effet au survol */
+}
+
+.lang-flag:hover {
+    transform: scale(1.1); /* S'agrandit légèrement au survol */
+}
+
+/* --- LE MÉCANISME DE MASQUAGE --- */
+
+/* 1. Par défaut (mode français) : on cache les textes anglais et le drapeau UK */
+.lang-en, #flag-uk {
+    display: none;
+}
+
+/* 2. Si la page passe en mode anglais (body.en) : on cache les textes français... */
+body.en .lang-fr {
+    display: none;
+}
+
+/* 3. Et on affiche les textes anglais... */
+body.en .lang-en {
+    display: inline;
+}
+
+/* 4. ...et on gère l'affichage des drapeaux (la date est toujours 'static' ou 'absolute' selon votre méthode précédente) */
+body.en #flag-fr {
+    display: none; /* Cache le drapeau français en mode anglais */
+}
+
+body.en #flag-uk {
+    display: block; /* Affiche le drapeau anglais en mode anglais */
+}
+
+
+/* --- 7. RESPONSIVE (TÉLÉPHONE) --- */
 @media screen and (max-width: 768px) {
     .container {
         margin: 10px;
