@@ -1,3 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
+/* 2. Supprime les marges parasites du navigateur et bloque les débordements */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* La formule magique qui interdit à l'écran d'aller de gauche à droite */
+}
+
+
 /* --- 1. BASES & RÉINITIALISATION --- */
 * {
     margin: 0;
@@ -15,7 +27,7 @@ body {
 /* --- 2. STRUCTURE PRINCIPALE --- */
 .container {
     width: 90%;         
-    max-width: 1200px;   
+    max-width: 1100px;   
     margin: 40px auto;   
     background: #fff;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -42,7 +54,7 @@ body {
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #428bd9;
+    border: 4px solid #428bd9;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
@@ -336,9 +348,46 @@ body.en #flag-uk {
         color: #333;           /* Couleur du point */
         font-weight: bold;
     }
-    
+
     .main-content, .sidebar {
         padding-left: 20px;
         padding-right: 20px;
+    }
+
+    /* 1. On rend le titre cliquable et on lui fait de la place pour un symbole */
+    .sidebar-section h3 {
+        cursor: pointer;
+        position: relative;
+        padding-right: 20px;
+        border-bottom: 1px solid rgba(0,0,0,0.1); /* Petite ligne de séparation esthétique */
+        padding-bottom: 5px;
+    }
+
+    /* 2. On ajoute un petit "+" à droite du titre */
+    .sidebar-section h3::after {
+        content: '+';
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: #0056b3; /* Utilisez la couleur bleue de votre CV */
+        font-weight: bold;
+    }
+
+    /* 3. Quand c'est ouvert, le "+" devient un "-" */
+    .sidebar-section.ouverte h3::after {
+        content: '-';
+    }
+
+    /* 4. On cache TOUT le contenu de la section par défaut */
+    .sidebar-section ul,
+    .sidebar-section p {
+        display: none;
+        margin-top: 10px;
+    }
+
+    /* 5. On affiche le contenu UNIQUEMENT si la section reçoit la classe "ouverte" */
+    .sidebar-section.ouverte ul,
+    .sidebar-section.ouverte p {
+        display: block;
     }
 }
