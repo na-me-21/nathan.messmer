@@ -14,8 +14,9 @@ body {
 
 /* --- 2. STRUCTURE PRINCIPALE --- */
 .container {
-    max-width: 1000px;
-    margin: 40px auto;
+    width: 90%;         
+    max-width: 1200px;   
+    margin: 40px auto;   
     background: #fff;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     border-radius: 8px;
@@ -28,7 +29,7 @@ body {
 }
 
 .header-photo {
-    width: 32%; /* Même largeur que la sidebar */
+    width: 27%; /* Même largeur que la sidebar */
     background-color: #f0f4f8; /* Même fond que la sidebar */
     padding: 40px 25px 10px 25px;
     display: flex;
@@ -47,10 +48,11 @@ body {
 
 .header-text {
     width: 68%;
-    padding: 40px 40px 10px 40px;
+    padding: 60px 40px 10px 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
 }
 
 .header-text h1 {
@@ -80,14 +82,14 @@ body {
 }
 
 .sidebar {
-    width: 32%;
+    width: 27%;
     background-color: #f0f4f8;
     padding: 20px 25px 40px 25px;
     border-right: 1px solid #e1e8ed;
 }
 
 .main-content {
-    width: 68%;
+    width: 73%;
     padding: 20px 40px 40px 40px;
 }
 
@@ -333,5 +335,10 @@ body.en #flag-uk {
         content: "• ";         /* Ajoute le point suivi d'un espace */
         color: #333;           /* Couleur du point */
         font-weight: bold;
+    }
+    
+    .main-content, .sidebar {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
