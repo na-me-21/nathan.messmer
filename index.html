@@ -10,9 +10,24 @@
 
     <div class="container">
 
-        <div id="lang-switch-container">
-            <img src="drapeau_uk.png" alt="Version Française" class="lang-flag" id="flag-fr">
-            <img src="drapeau_fr.png" alt="English Version" class="lang-flag" id="flag-uk">
+        <div id="custom-lang-menu">
+            <button id="current-lang-btn">
+                <img src="drapeau_fr.png" alt="FR" id="current-flag"> 
+                <span id="current-text">FR</span> 
+                <span class="arrow">▼</span>
+            </button>
+
+            <div id="lang-options">
+                <div class="lang-option" data-lang="fr">
+                    <img src="drapeau_fr.png" alt="FR"> FR
+                </div>
+                <div class="lang-option" data-lang="en">
+                    <img src="drapeau_uk.png" alt="EN"> EN
+                </div>
+                <div class="lang-option" data-lang="de">
+                    <img src="drapeau_de.png" alt="DE"> DE
+                </div>
+            </div>
         </div>
 
         <header class="top-header">
@@ -23,10 +38,12 @@
                 <h1>
                     <span class="lang-fr">MESSMER Nathan</span>
                     <span class="lang-en">NATHAN MESSMER</span>
+                    <span class="lang-de">MESSMER Nathan</span>
                 </h1>
                 <h2>
                     <span class="lang-fr">Étudiant en école d'ingénieur mécanique à la recherche d'un contrat de professionalisation dans la robotique, l'automatisation et/ou la CAO.</span>
                     <span class="lang-en">Student in Mechanical Engineering School looking for a professionalization contract in robotics, automation and/or CAD.</span>
+                    <span class="lang-de">Student an einer Ingenieurshochschule für Maschinenbau, auf der Suche nach einem Ausbildungsvertrag in den Bereichen Robotik, Automatisierung und/oder CAD.</span>
                 </h2>
                 <hr class="header-line"> 
             </div>
@@ -36,12 +53,21 @@
 
             <aside class="sidebar">
                 <section class="sidebar-section">
-                    <h3>Contact</h3>
+                    <h3>
+                        <div class="lang-fr">Contact</div>
+                        <div class="lang-en">Contact</div>
+                        <div class="lang-de">Kontakt</div>
+                    </h3>
                     <ul class="contact-list">
                         <li><img src="logo_mail.jpg" alt="Email" class="logo">nathan.messmer21@gmail.com </li>
-                        <li><img src="logo_phone.jpg" alt="Phone" class="logo">07 71 66 42 90 </li>
+                        <li>
+                            <div class="lang-fr"><img src="logo_phone.jpg" alt="Phone" class="logo">07 71 66 42 90 </div>
+                            <div class="lang-en"><img src="logo_phone.jpg" alt="Phone" class="logo">+33 7 71 66 42 90 </div>
+                            <div class="lang-de"><img src="logo_phone.jpg" alt="Phone" class="logo">+33 7 71 66 42 90 </div>
+                        </li>
                         <div class="skill-level lang-fr">Indisponible par téléphone jusqu'au 20 septembre 2026 car je suis à l'étranger.</div>
                         <div class="skill-level lang-en">I won't be available by phone until 20 September 2026 as I'll be abroad.</div>
+                        <div class="skill-level lang-de">Ich kann bis dem 20. September 2026 nicht an telefon antworten, weil ich im Ausland bin.</div>
                         <li><img src="logo_adresse.png" alt="Location" class="logo">63000 Clermont-Ferrand </li>
                         <li><img src="logo_linkedin.jpg" alt="LinkedIn" class="logo"><a href="https://www.linkedin.com/in/nathan-messmer" target="_blank">Nathan MESSMER </a></li>
                     </ul>
@@ -51,15 +77,18 @@
                     <h3>
                         <span class="lang-fr">Infos Personnelles</span>
                         <span class="lang-en">Personal Information</span>
+                        <span class="lang-de">Persönliche Informationen</span>
                     </h3>
                     <ul>
                         <li>
                             <span class="lang-fr">22 ans</span>
                             <span class="lang-en">22 years old</span>
+                            <span class="lang-de">22 Jahre</span>
                         </li>
                         <li>
                             <span class="lang-fr">Permis B / Véhiculé</span>
                             <span class="lang-en">Driver's license / Own vehicle</span>
+                            <span class="lang-de">Führerschein B / Eigenes Fahrzeug</span>
                         </li>
                     </ul>
                 </section>
@@ -72,26 +101,32 @@
                         <li>
                             <span class="lang-fr">Pédagogie</span>
                             <span class="lang-en">Pedagogy</span>
+                            <span class="lang-de">Pädagogik</span>
                         </li>
                         <li>
                             <span class="lang-fr">Adaptabilité</span>
                             <span class="lang-en">Adaptability</span>
+                            <span class="lang-de">Anpassungsfähigkeit</span>
                         </li>
                         <li>
                             <span class="lang-fr">Autonomie</span>
                             <span class="lang-en">Autonomy</span>
+                            <span class="lang-de">Autonomie</span>
                         </li>
                         <li>
                             <span class="lang-fr">Créativité</span>
                             <span class="lang-en">Creativity</span>
+                            <span class="lang-de">Kreativität</span>
                         </li>
                         <li>
                             <span class="lang-fr">Rigueur</span>
                             <span class="lang-en">Rigour</span>
+                            <span class="lang-de">Strenge</span>
                         </li>
                         <li>
                             <span class="lang-fr">Fiabilité</span>
                             <span class="lang-en">Reliability</span>
+                            <span class="lang-de">Zuverlässigkeit</span>
                         </li>
                     </ul>
                 </section>
@@ -100,19 +135,23 @@
                     <h3>
                         <span class="lang-fr">Loisirs</span>
                         <span class="lang-en">Hobbies</span>
+                        <span class="lang-de">Hobbys</span>
                     </h3>
                     <ul>
                         <li>
                             <span class="lang-fr"><strong>Sport :</strong> tennis, escalade, fitness </span>
                             <span class="lang-en"><strong> Sport :</strong> tennis, climbing, fitness </span>
+                            <span class="lang-de"><strong> Sport :</strong> tennis, Klettern, Fitness </span>
                         </li>
                         <li>
                             <span class="lang-fr"><strong>Reflexion :</strong> lecture, échecs (ELO estimé : 1100), Rubik's Cube </span>
                             <span class="lang-en"><strong>Reflection :</strong> reading, chess (estimated ELO : 1100), Rubik's Cube </span>
+                            <span class="lang-de"><strong>Reflexion :</strong> Lesen, Schach (geschätzte ELO : 1100), Rubik's Cube </span>
                         </li>
                         <li>
                             <span class="lang-fr"><strong>Codage</strong></span>
                             <span class="lang-en"><strong>Programming</strong></span>
+                            <span class="lang-de"><strong>Codage</strong></span>
                         </li>
                     </ul>
                 </section>
@@ -124,14 +163,17 @@
                     <h3>
                         <span class="lang-fr">Présentation</span>
                         <span class="lang-en">Presentation</span>
+                        <span class="lang-de">Präsentation</span>
                     </h3>
                     <p>
                         <span class="lang-fr">Actuellement étudiant en cursus Mécanique Avancée, Robotique et Automatisation, j'entamerai l'an prochain la dernière année de mon parcours ingénieur. Dans ce cadre, je recherche un contrat de professionnalisation pour l'année 2026-2027. Mon projet se porte sur les domaines de la robotique, de l'industrialisation ou de la CAO, idéalement autour de Clermont-Ferrand, Roanne ou Ussel.</span>
-                        <span class="lang-en">I am currently studying on the Advanced Mechanics, Robotics and Automation programme and will be starting the final year of my engineering degree next year. As part of this, I am looking for a work-based training contract for the 2026–2027 academic year. My project focuses on the fields of robotics, industrialisation or CAD, ideally in the Clermont-Ferrand, Roanne or Ussel areas.</span>
+                        <span class="lang-en">I am currently studying on the Advanced Mechanics, Robotics and Automation programme and will be starting the final year of my engineering degree next year. As part of this, I am looking for a work-based training contract for the 2026-2027 academic year. My project focuses on the fields of robotics, industrialisation or CAD, ideally in the Clermont-Ferrand, Roanne or Ussel areas.</span>
+                        <span class="lang-de">Ich studiere derzeit im Studiengang Fortgeschrittene Maschinenbau, Robotik und Automatisierung und werde nächstes Jahr das letzte Jahr meines Ingenieursgrades beginnen. In diesem Zusammenhang suche ich einen praktikumsbasierten Ausbildungsvertrag für das akademische Jahr 2026-2027. Mein Projekt konzentriert sich auf die Bereiche der Robotik, der Industrialisierung oder des CAD, idealerweise in den Gebieten von Clermont-Ferrand, Roanne oder Ussel.</span>
                     </p>
                     <p>
                         <span class="lang-fr">Je suis passionné par les technologies émergentes et je souhaite mettre en pratique mes compétences techniques tout en continuant à apprendre dans un environnement professionnel stimulant.</span>
                         <span class="lang-en">I am passionate about emerging technologies and I wish to apply my technical skills in a stimulating professional environment.</span>
+                        <span class="lang-de">Ich bin leidenschaftlich an den emergenten Technologien interessiert und möchte meine technischen Fähigkeiten in einer stimulierenden beruflichen Umgebung anwenden.</span>
                     </p>
                 </section>
 
@@ -139,6 +181,7 @@
                     <h3>
                         <span class="lang-fr">Formation</span>
                         <span class="lang-en">Education</span>
+                        <span class="lang-de">Ausbildung</span>
                     </h3>
 
                     <div class="item">
@@ -146,6 +189,7 @@
                             <h4>
                                 <span class="lang-fr">Préparation du diplôme d'ingénieur mécanique - </span>
                                 <span class="lang-en">Preparation of the Engineer Degree in Mechanical Engineering - </span>
+                                <span class="lang-de">Vorbereitung des Ingenieursgrades in Maschinenbau - </span>
                                 <br>
                                 <em>
                                     <a href="https://www.sigma-clermont.fr/fr/index.html" target="_blank">Sigma-Clermont</a>,  Clermont-Ferrand
@@ -157,10 +201,12 @@
                             <li>
                                 <span class="lang-fr"><strong>Spécialité :</strong> Machine, Robot et Système</span>
                                 <span class="lang-en"><strong>Specialization :</strong> Machine, Robot and System</span>
+                                <span class="lang-de"><strong>Spezialisierung :</strong> Maschine, Roboter und System</span>
                             </li> 
                             <li>
                                 <span class="lang-fr"><strong>Orientation :</strong> Procédés de fabrication et Industrialisation.</span>
                                 <span class="lang-en"><strong>Orientation :</strong> Manufacturing Processes and Industrialization.</span>
+                                <span class="lang-de"><strong>Orientierung :</strong> Fertigungsprozesse und Industrialisierung.</span>
                             </li>
                         </ul>
                     </div>
@@ -170,7 +216,7 @@
                             <h4>
                                 <span class="lang-fr">Classe préparatoire PCSI/PSI* - </span>
                                 <span class="lang-en">Preparatory Class PCSI/PSI* - </span>
-                                
+                                <span class="lang-de">Vorbereitende Klasse PCSI/PSI* - </span>
                                 <em>
                                     <a href="https://lyc-couffignal-strasbourg.site.ac-strasbourg.fr/" target="_blank">Lycée Louis Couffignal</a>, <br> Strasbourg
                                 </em>
@@ -184,7 +230,7 @@
                             <h4>
                                 <span class="lang-fr">Baccalauréat scientifique - </span>
                                 <span class="lang-en">Scientific High School Diploma - </span>
-                                
+                                <span class="lang-de">Wissenschaftliches Abitur - </span>
                                 <em>
                                     <a href="https://lycee-europeen-schuman.eu" target="_blank">Lycée Robert Schuman</a>, <br> Haguenau
                                 </em> 
@@ -195,14 +241,17 @@
                             <li>
                                 <span class="lang-fr"><strong>Spécialité :</strong> Mathématique, Physique-Chimie, NSI. </span>
                                 <span class="lang-en"><strong>Specialization :</strong> Mathematics, Physics-Chemistry, Computer Science. </span>
+                                <span class="lang-de"><strong>Spezialisierung :</strong> Mathematik, Physik-Chemie, Informatik. </span>
                             </li>
                             <li>
                                 <span class="lang-fr"><strong>Option :</strong> Mathématiques expertes. </span>
                                 <span class="lang-en"><strong>Option :</strong> Advanced Mathematics. </span>
+                                <span class="lang-de"><strong>Option :</strong> Fortgeschrittene Mathematik. </span>
                             </li>
                             <li>
                                 <span class="lang-fr"><strong>Mention :</strong> Assez bien. </span>
                                 <span class="lang-en"><strong>Grade :</strong> Satisfactory. </span>
+                                <span class="lang-de"><strong>Noten :</strong> Zufriedenstellend. </span>
                             </li>
                         </ul>
                     </div>
@@ -212,20 +261,25 @@
                     <h3>
                         <span class="lang-fr">Langues : écrites et parlées</span>
                         <span class="lang-en">Languages : written and spoken</span>
+                        <span class="lang-de">Sprachen : geschrieben und gesprochen</span>
                     </h3>
                     <ul>
                         <span class="lang-en"><li><strong>French :</strong> Native speaker</li> </span>
+                        <span class="lang-de"><li><strong>Französisch :</strong> Muttersprachler</li> </span>
                         <li>
                             <span class="lang-fr"><strong>Anglais :</strong> B2 - Intermédiaire supérieur </span>
                             <span class="lang-en"><strong>English :</strong> B2 - Upper Intermediate </span>
+                            <span class="lang-de"><strong>Englisch :</strong> B2 - Oberer Mittelstufe </span>
                         </li>
                         <li>
                             <span class="lang-fr"><strong>Allemand :</strong> B1 - Intermédiaire </span>
                             <span class="lang-en"><strong>German :</strong> B1 - Intermediate </span>
+                            <span class="lang-de"><strong>Deutsch :</strong> B1 - Mittelstufe </span>
                         </li>
                         <li>
                             <span class="lang-fr"><strong>Japonais :</strong> A1 - Débutant </span>
                             <span class="lang-en"><strong>Japanese :</strong> A1 - Beginner </span>
+                            <span class="lang-de"><strong>Japanisch :</strong> A1 - Anfänger </span>
                         </li>
                     </ul>
                 </section>
@@ -234,22 +288,26 @@
                     <h3>
                         <span class="lang-fr">Compétences professionnelles</span>
                         <span class="lang-en">Hard-Skills</span>
+                        <span class="lang-de">Fachkompetenzen</span>
                     </h3>
                     <ul>
                         <li>
                             <strong>Word / Excel / PowerPoint</strong>
                             <span class="skill-level lang-fr">Maîtrise avancée</span>
                             <span class="skill-level lang-en"><br>Advanced proficiency</span>
+                            <span class="skill-level lang-de"><br>Fortgeschrittene Beherrschung</span>
                         </li>
                         <li>
                             <strong>Python / Matlab / HTML / CSS</strong>
                             <span class="skill-level lang-fr">Maîtrise intermédiaire avancée</span>
                             <span class="skill-level lang-en"><br>Advanced intermediate proficiency</span>
+                            <span class="skill-level lang-de"><br>Fortgeschrittene mittlere Beherrschung</span>
                         </li>
                         <li>
                             <strong>Catia / SolidWorks / Access / Ansys / Adams / KissSoft / RoboDK / Interface UR</strong>
                             <span class="skill-level lang-fr">Maîtrise scolaire</span>
                             <span class="skill-level lang-en"><br>School-level proficiency</span>
+                            <span class="skill-level lang-de"><br>Schulniveau Beherrschung</span>
                         </li>
                     </ul>
                 </section>
@@ -258,6 +316,7 @@
                     <h3>
                         <span class="lang-fr">Projets</span>
                         <span class="lang-en">Projects</span>
+                        <span class="lang-de">Projekte</span>
                     </h3>
 
                     <div class="item">
@@ -267,28 +326,36 @@
                         </div>
                         <span class="skill-level lang-fr"><strong>Soft-Skill acquis :</strong> Adaptabilité / Autonomie / Créativité / Rigueur</span>
                         <span class="skill-level lang-en"><strong>Soft-skills acquired :</strong> Adaptability / Autonomy / Creativity / Rigour</span>
+                        <span class="skill-level lang-de"><strong>Soft-Skills erworben :</strong> Anpassungsfähigkeit / Selbstständigkeit / Kreativität / Genauigkeit</span>
                         <ul>
                             <li>
                                 <span class="lang-fr"><strong>Pôle simulation :</strong> Simulation des performances du véhicule</span>
                                 <span class="skill-level lang-fr"><strong>Outils utilisés :</strong> Matlab / Python / Ansys</span>
                                 <span class="lang-en"><strong>Simulation Pole :</strong> Simulation of vehicle performance</span>
                                 <span class="skill-level lang-en"><br><strong>Tools used :</strong> Matlab / Python / Ansys</span>    
+                                <span class="lang-de"><strong>Simulations Zentrum :</strong> Simulation von Fahrzeugleistungen</span>
+                                <span class="skill-level lang-de"><br><strong>Verwendete Tools :</strong> Matlab / Python / Ansys</span>
                             </li>
                             <li>
                                 <span class="lang-fr"><strong>Pôle électrique :</strong> Aide à la conception et à la réalisation de systèmes électriques / électroniques</span>
                                 <span class="skill-level lang-fr"><strong>Outils utilisés :</strong> Arduino</span>
                                 <span class="lang-en"><strong>Electrical Pole :</strong> Assistance with the design and realization of electrical/electronic systems</span>
                                 <span class="skill-level lang-en"><br><strong>Tools used :</strong> Arduino</span>   
+                                <span class="lang-de"><strong>Elektrisches Zentrum :</strong> Unterstützung bei der Gestaltung und Realisierung elektrischer/Elektronik-Systeme</span>
+                                <span class="skill-level lang-de"><br><strong>Verwendete Tools :</strong> Arduino</span>
                             </li>
                             <li>
                                 <span class="lang-fr"><strong>Pôle mécanique :</strong> Aide à la conception de la partie mécanique et structurelle de la voiture</span>
                                 <span class="skill-level lang-fr"><strong>Outils utilisés :</strong> Ansys / KissSoft / Catia / Solidworks</span>
                                 <span class="lang-en"><strong>Mechanical Pole :</strong> Assistance with the design of the mechanical and structural part of the car</span>
-                                <span class="skill-level lang-en"><br><strong>Tools used :</strong> Ansys / KissSoft / Catia / Solidworks</span>   
+                                <span class="skill-level lang-en"><br><strong>Tools used :</strong> Ansys / KissSoft / Catia / Solidworks</span>  
+                                <span class="lang-de"><strong>Mechanisches Zentrum :</strong> Unterstützung bei der Gestaltung und Realisierung mechatronischer Systeme</span>
+                                <span class="skill-level lang-de"><br><strong>Verwendete Tools :</strong> Ansys / KissSoft / Catia / Solidworks</span>
                             </li>
                             <li>
                                 <span class="lang-fr"><strong>2025 :</strong> Participation à des compétitions internationales : France et Espagne <br> Responsable pour l'épreuve du Business Plan</span>
                                 <span class="lang-en"><strong>2025 :</strong> Participation in international competitions : France and Spain <br> Responsible for the Business Plan event</span>
+                                <span class="lang-de"><strong>2025 :</strong> Teilnahme an internationalen Wettbewerben : Frankreich und Spanien <br> Verantwortlich für die Business Plan-Veranstaltung</span>
                             </li>
                         </ul>
                     </div>
@@ -298,10 +365,12 @@
                             <h4>TIPE - 
                                 <span class="lang-fr"><em>Prépa Couffignal</em></span>
                                 <span class="lang-en"><em>Preparatory Class Couffignal</em></span>
+                                <span class="lang-de"><em>Vorbereitende Klasse Couffignal</em></span>
                             </h4>
                         </div>
                         <span class="skill-level lang-fr"><strong>Soft-Skill acquis :</strong> Adaptabilité / Autonomie / Créativité / Rigueur</span>
                         <span class="skill-level lang-en"><strong>Soft-skills acquired :</strong> Adaptability / Autonomy / Creativity / Rigour</span>
+                        <span class="skill-level lang-de"><strong>Soft-Skills erworben :</strong> Anpassungsfähigkeit / Selbstständigkeit / Kreativität / Genauigkeit</span>
                         
                         <ul class="list-with-dates">
                             <li> 
@@ -309,19 +378,24 @@
                                 <div class="li-text">
                                     <span class="lang-fr"><strong>Aide à l'arbitrage humain au tennis par outil numérique</strong> <br> </span>
                                     <span class="lang-en"><strong>Assistance to human refereeing in tennis through digital tool</strong> <br> </span>
+                                    <span class="lang-de"><strong>Unterstützung beim menschlichen Schiedsrichter in Tennis durch digitales Tool</strong> <br> </span>
 
                                     <em style="color: #666;">
                                         <span class="lang-fr">Thème : Le Sport</span>
                                         <span class="lang-en">Theme: Sports</span>
+                                        <span class="lang-de">Thema: Sport</span>
                                     </em><br>
                                     <p>
                                         <span class="lang-fr">Développement d'une technologie de détection de ligne par vision artificielle du terrain (lasers et/ou plaques de pression). <br></span>
                                         <span class="skill-level lang-fr"><strong><em>Outils utilisés :</em></strong> Python / Arduino</span>
                                         <span class="lang-en">Development of a line detection technology through artificial intelligence on the field (lasers and/or pressure plates). <br></span>
                                         <span class="skill-level lang-en"><strong><em>Tools used :</em></strong> Python / Arduino<br></span>
+                                        <span class="lang-de">Entwicklung einer Linienerkennungstechnologie durch künstliche Intelligenz auf dem Spielfeld (Laser und/oder Druckplatten). <br></span>
+                                        <span class="skill-level lang-de"><strong><em>Verwendete Tools :</em></strong> Python / Arduino<br></span>
                                         <em>
                                             <span class="lang-fr"><a href="https://github.com/na-me-21/TIPE2" target="_blank">Présentation finale</a></span>
                                             <span class="lang-en"><a href="https://github.com/na-me-21/TIPE2" target="_blank">Final Presentation</a></span>
+                                            <span class="lang-de"><a href="https://github.com/na-me-21/TIPE2" target="_blank">Endpräsentation</a></span>
                                         </em>
                                     </p>                               
                                 </div>
@@ -331,18 +405,23 @@
                                 <div class="li-text">
                                     <span class="lang-fr"><strong>Gestion du trafic routier à un carrefour par intelligence artificielle</strong> <br> </span>
                                     <span class="lang-en"><strong>Traffic Management at a Traffic Light by Artificial Intelligence</strong> <br> </span>
+                                    <span class="lang-de"><strong>Verkehrsmanagement an einem Verkehrsschild durch künstliche Intelligenz</strong> <br> </span>
                                     <em style="color: #666;">
                                         <span class="lang-fr">Thème : La Ville </span>
                                         <span class="lang-en">Theme: The City </span>
+                                        <span class="lang-de">Thema: Die Stadt </span>
                                     </em><br>
                                     <p>
                                         <span class="lang-fr">Développement d'un algorithme d'obtention de plans de feux de circulation optimal par algorithme génétique en fonction du paramètre souhaité. <br></span>
                                         <span class="skill-level lang-fr"><strong><em>Outils utilisés :</em></strong> Python </span>
                                         <span class="lang-en">Development of an algorithm for obtaining optimal traffic light plans by genetic algorithm according to the desired parameter. <br></span>
                                         <span class="skill-level lang-en"><strong><em>Tools used :</em></strong> Python<br></span>
+                                        <span class="lang-de">Entwicklung eines Algorithmus zur Erzielung optimaler Verkehrslichtpläne durch genetischen Algorithmus gemäß dem gewünschten Parameter. <br></span>
+                                        <span class="skill-level lang-de"><strong><em>Verwendete Tools :</em></strong> Python<br></span>
                                         <em>
                                             <span class="lang-fr"><a href="https://github.com/na-me-21/TIPE1" target="_blank">Présentation finale</a></span>
                                             <span class="lang-en"><a href="https://github.com/na-me-21/TIPE1" target="_blank">Final Presentation</a></span>
+                                            <span class="lang-de"><a href="https://github.com/na-me-21/TIPE1" target="_blank">Endpräsentation</a></span>
                                         </em>
                                     </p>
                                 </div>
@@ -355,6 +434,7 @@
                     <h3>
                         <span class="lang-fr">Parcours Professionnel</span>
                         <span class="lang-en">Professional Experience</span>
+                        <span class="lang-de">Berufliche Erfahrung</span>
                     </h3>
 
                     <div class="item">
@@ -362,28 +442,35 @@
                             <h4>
                                 <span class="lang-fr">Stagiaire en Université - <em><a href="https://www.aau.edu.et/" target="_blank">Addis Ababa University</a>, Ethiopie</em></span>
                                 <span class="lang-en">Intern at University - <em><a href="https://www.aau.edu.et/" target="_blank">Addis Ababa University</a>, Ethiopia</em></span>
+                                <span class="lang-de">Praktikant an der Universität - <em><a href="https://www.aau.edu.et/" target="_blank">Addis Ababa University</a>, Äthiopien</em></span>
                             </h4>
                             <span class="date lang-fr">Mai 2026 - Sept 2026</span>
                             <span class="date lang-en">May 2026 - Sept 2026</span>
+                            <span class="date lang-de">Mai 2026 - Sept 2026</span>
                         </div>
                         <em style="color: #666;">
                             <span class="lang-fr"><strong>Projet : Ethiopie 4.0<br></strong></span>
                             <span class="lang-en"><strong>Project: Ethiopia 4.0<br></strong></span>
+                            <span class="lang-de"><strong>Projekt: Äthiopien 4.0<br></strong></span>
                         </em>
                         <ul>
                             <li>
                                 <span class="lang-fr">Applications de cobots dans la fabrication à petite échelle.</span>
                                 <span class="lang-en">Applications of cobots in small-scale manufacturing.</span>
+                                <span class="lang-de">Anwendungen von cobots in der Kleinstserienfertigung.</span>
                             </li>
                             <li>
                                 <span class="lang-fr">Mise en place d'un Workshop axé sur la métrologie.</span>
                                 <span class="lang-en">Setup of a workshop focused on metrology.</span>
+                                <span class="lang-de">Einrichtung eines Workshops mit Schwerpunkt auf Metrologie.</span>
                             </li>
                         </ul>
                         <div class="skill-level lang-fr"><strong><em>Outils utilisés :</em></strong> Python / Catia / RoboDK / Interface UR</div>
                         <div class="skill-level lang-fr"><strong><em>Soft-Skill acquis :</em></strong> Pédagogie / Adaptabilité / Autonomie / Créativité / Rigueur / Fiabilité</div>
                         <div class="skill-level lang-en"><strong><em>Tools used :</em></strong> Python / Catia / RoboDK / UR Interface<br></div>
                         <div class="skill-level lang-en"><strong><em>Soft-Skill acquired :</em></strong> Pedagogy / Adaptability / Autonomy / Creativity / Rigour / Reliability</div>
+                        <div class="skill-level lang-de"><strong><em>Verwendete Tools :</em></strong> Python / Catia / RoboDK / UR Interface<br></div>
+                        <div class="skill-level lang-de"><strong><em>Soft-Skill erworben :</em></strong> ädagogik / Anpassungsfähigkeit / Autonomie / Kreativität / Rigorosität / Zuverlässigkeit</div>
                     </div>
 
                     <div class="item">
@@ -391,18 +478,22 @@
                             <h4>
                                 <span class="lang-fr">Employé polyvalent - <em><a href="https://www.mcdonalds.fr/" target="_blank">McDonald's</a>, <br>Clermont-Ferrand</em></span>
                                 <span class="lang-en">Multiskilled Employee - <em><a href="https://www.mcdonalds.fr/" target="_blank">McDonald's</a>, <br>Clermont-Ferrand</em></span>
+                                <span class="lang-de">Mehrfachqualifizierter Mitarbeiter - <em><a href="https://www.mcdonalds.fr/" target="_blank">McDonald's</a>, <br>Clermont-Ferrand</em></span>
                             </h4>
                             <span class="date lang-fr">Sept 2025 - Mai 2026</span>
                             <span class="date lang-en">Sept 2025 - May 2026</span>
+                            <span class="date lang-de">Sept 2025 - Mai 2026</span>
                         </div>
                         <ul>
                             <li>
                                 <span class="lang-fr">Préparation des commandes, service et accueil des clients, gestion d'équipe.</span>
                                 <span class="lang-en">Order preparation, service and customer reception, team management.</span>
+                                <span class="lang-de">Bestellungsvorbereitung, Service und Kundenbetreuung, Teamführung.</span>
                             </li>
                         </ul>
                         <span class="skill-level lang-fr"><strong><em>Soft-Skill acquis :</em></strong>Pédagogie / Adaptabilité / Autonomie / Fiabilité </span>
                         <span class="skill-level lang-en"><strong><em>Soft-Skill acquired :</em></strong>Pedagogy / Adaptability / Autonomy / Reliability</span>
+                        <span class="skill-level lang-de"><strong><em>Soft-Skill erworben :</em></strong>ädagogik / Anpassungsfähigkeit / Autonomie / Kreativität / Rigorosität / Zuverlässigkeit</span>
                     </div>
 
                     <div class="item">
@@ -410,18 +501,22 @@
                             <h4>
                                 <span class="lang-fr">Opérateur machine - <em><a href="https://www.schaeffler.fr/fr/" target="_blank">Groupe Schaeffler</a>, <br>Haguenau</em></span>
                                 <span class="lang-en">Machine Operator - <em><a href="https://www.schaeffler.fr/fr/" target="_blank">Schaeffler Group</a>, <br>Haguenau</em></span>
+                                <span class="lang-de">Maschinenbediener - <em><a href="https://www.schaeffler.fr/fr/" target="_blank">Schaeffler Group</a>, <br>Haguenau</em></span>
                             </h4>
                             <span class="date lang-fr">Juillet - Août 2025</span>
                             <span class="date lang-en">July - August 2025</span>
+                            <span class="date lang-de">Juli - August 2025</span>
                         </div>
                         <ul>
                             <li>
                                 <span class="lang-fr">Opérateur sur machine à commande numérique (industrie automobile).</span>
                                 <span class="lang-en">Operator on numerically controlled machine (automotive industry).</span>
+                                <span class="lang-de">Maschinenbediener auf CNC-Maschinen (Automobilindustrie).</span>
                             </li>
                         </ul>
                         <span class="skill-level lang-fr"><strong><em>Soft-Skill acquis :</em></strong> Adaptabilité / Autonomie / Fiabilité</span>
                         <span class="skill-level lang-en"><strong><em>Soft-Skill acquired :</em></strong> Adaptability / Autonomy / Reliability</span>
+                        <span class="skill-level lang-de"><strong><em>Soft-Skill erworben :</em></strong> Anpassungsfähigkeit / Autonomie / Kreativität / Rigorosität / Zuverlässigkeit</span>
                     </div>
 
                     <div class="item">
@@ -429,22 +524,27 @@
                             <h4>
                                 <span class="lang-fr">Expériences intérimaires</span>
                                 <span class="lang-en">Temporary Work Experience</span>
+                                <span class="lang-de">Temporäre Arbeitserfahrung</span>
                             </h4>
                             <span class="date lang-fr">Étés de 2023 et 2024</span>
                             <span class="date lang-en">Summers of 2023 and 2024</span>
+                            <span class="date lang-de">Sommern von 2023 und 2024</span>
                         </div>
                         <ul>
                             <li>
                                 <span class="lang-fr">Maintenancier (<a href="https://fonderie-industrielle.eu/" target="_blank">Fonderie de Niederbronn</a>) / Ouvrier du bâtiment.</span>
                                 <span class="lang-en">Maintenance Technician (<a href="https://fonderie-industrielle.eu/" target="_blank">Foundry of Niederbronn</a>) / Construction Worker.</span>
+                                <span class="lang-de">Wartungstechniker (<a href="https://fonderie-industrielle.eu/" target="_blank">Gusserei von Niederbronn</a>) / Bautechniker.</span>
                             </li>
                             <li>
                                 <span class="lang-fr">Opérateur CN (<a href="https://www.buerstner.com/fr/buerstner Bürstner" target="_blank">Bürstner</a>) / Agent de production (<a href="https://www.naturalvi.com/" target="_blank">Naturalvi</a>).</span>
                                 <span class="lang-en">CN Operator (<a href="https://www.buerstner.com/fr/buerstner Bürstner" target="_blank">Bürstner</a>) / Production Assistant (<a href="https://www.naturalvi.com/" target="_blank">Naturalvi</a>).</span>
+                                <span class="lang-de">CN-Operator (<a href="https://www.buerstner.com/fr/buerstner Bürstner" target="_blank">Bürstner</a>) / Produktionsassistent (<a href="https://www.naturalvi.com/" target="_blank">Naturalvi</a>).</span>
                             </li>
                         </ul>
                         <span class="skill-level lang-fr"><strong><em>Soft-Skill acquis :</em></strong> Adaptabilité / Fiabilité</span>
                         <span class="skill-level lang-en"><strong><em>Soft-Skill acquired :</em></strong> Adaptability / Reliability</span>
+                        <span class="skill-level lang-de"><strong><em>Soft-Skill erworben :</em></strong> Anpassungsfähigkeit / Zuverlässigkeit</span>
                     </div>
 
                     <div class="item">
@@ -452,57 +552,101 @@
                             <h4>
                                 <span class="lang-fr">Réserviste de l'Armée de l'Air et de l'Espace</span>
                                 <span class="lang-en">Reservist of the Air Force and Space Force</span>
+                                <span class="lang-de">Reservist der Luftwaffe und des Weltraumforces</span>
                             </h4>
                             <span class="date lang-fr">Juillet 2021 - Juillet 2023</span>
                             <span class="date lang-en">July 2021 - July 2023</span>
+                            <span class="date lang-de">Juli 2021 - Juli 2023</span>
                         </div>
                         <ul>
                             <li>
                                 <span class="lang-fr">Assistant de secrétariat</span>
                                 <span class="lang-en">Administrative Assistant</span>
+                                <span class="lang-de">Verwaltungsassistent</span>
                             </li>
                             <li>
                                 <span class="lang-fr">Mécanicien piste</span>
                                 <span class="lang-en">Runway Mechanic</span>
+                                <span class="lang-de">Start- und Landebahnmechaniker</span>
                             </li>
                             <li>
                                 <span class="lang-fr">Mécanicien équipement de vol</span>
                                 <span class="lang-en">Aircraft Equipment Mechanic</span>
+                                <span class="lang-de">Flugzeugausrüstungsmechaniker</span>
                             </li>
                         </ul>
                         <span class="skill-level lang-fr"><strong><em>Soft-Skill acquis :</em></strong> Adaptabilité / Autonomie / Rigueur / Fiabilité</span>
                         <span class="skill-level lang-en"><strong><em>Soft-Skill acquired :</em></strong> Adaptability / Autonomy / Rigour / Reliability</span>
+                        <span class="skill-level lang-de"><strong><em>Soft-Skill erworben :</em></strong> Anpassungsfähigkeit / Autonomie / Kreativität / Rigorosität / Zuverlässigkeit</span>
                     </div>
                 </section>
             </main>
 
         </div> 
     </div> 
+
+    <button id="scroll-top-btn" title="Remonter en haut">⬆</button>
+
     <script>
-    // --- VOTRE ANCIEN CODE POUR LA LANGUE ---
-    const btn = document.getElementById('lang-switch-container');
-    btn.addEventListener('click', () => {
-        document.body.classList.toggle('en'); 
-    });
-
-    // --- LE NOUVEAU CODE POUR L'ACCORDÉON MOBILE ---
-    // 1. On récupère toutes les sections de la barre latérale
-    const sidebarSections = document.querySelectorAll('.sidebar-section');
-
-    // 2. Pour chaque section, on va écouter les clics sur le titre
-    sidebarSections.forEach(section => {
-        const title = section.querySelector('h3');
+        const menuBtn = document.getElementById('current-lang-btn');
+        const optionsMenu = document.getElementById('lang-options');
+        const options = document.querySelectorAll('.lang-option');
         
-        if (title) { // Si la section a bien un titre
-            title.addEventListener('click', () => {
-                // On vérifie qu'on est bien sur un écran de téléphone (largeur max 768px)
-                if (window.innerWidth <= 768) {
-                    // On ouvre ou on ferme la section cliquée
-                    section.classList.toggle('ouverte');
+        const currentFlag = document.getElementById('current-flag');
+        const currentText = document.getElementById('current-text');
+
+        // Ouvre/Ferme le menu quand on clique sur le bouton
+        menuBtn.addEventListener('click', () => {
+            optionsMenu.classList.toggle('show');
+        });
+
+        // Gère le clic sur une langue
+        options.forEach(option => {
+            option.addEventListener('click', () => {
+                const selectedLang = option.getAttribute('data-lang');
+                const imgSrc = option.querySelector('img').src;
+                const text = option.textContent.trim();
+
+                // 1. Met à jour le bouton avec le drapeau et le texte choisis
+                currentFlag.src = imgSrc;
+                currentText.textContent = text;
+
+                // 2. Change la langue du CV
+                document.body.classList.remove('en', 'de');
+                if (selectedLang !== 'fr') {
+                    document.body.classList.add(selectedLang);
                 }
+
+                // 3. Ferme le menu
+                optionsMenu.classList.remove('show');
             });
-        }
-    });
-</script>
+        });
+
+        // Ferme le menu si on clique ailleurs sur la page
+        document.addEventListener('click', (event) => {
+            if (!document.getElementById('custom-lang-menu').contains(event.target)) {
+                optionsMenu.classList.remove('show');
+            }
+        });
+        // --- CODE POUR LE BOUTON REMONTER ---
+        const scrollTopBtn = document.getElementById('scroll-top-btn');
+
+        // 1. Fait apparaître le bouton quand on descend de 300 pixels
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.style.display = 'block';
+            } else {
+                scrollTopBtn.style.display = 'none';
+            }
+        });
+
+        // 2. Remonte doucement tout en haut quand on clique
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' /* Le fameux défilement doux ! */
+            });
+        });
+    </script>
     </body>
 </html>

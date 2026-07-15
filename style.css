@@ -208,65 +208,104 @@ ul li::marker {
 }
 
 
-/* --- 6. BOUTONS DRAPEAUX & SYSTÈME DE TRADUCTION --- */
+/* --- 6. MENU DÉROULANT SUR MESURE (AVEC IMAGES) --- */
 
-/* Sécurité : permet au conteneur de se caler par rapport au CV */
-.container {
-    position: relative; 
-}
-
-/* Le style du conteneur des drapeaux */
-#lang-switch-container {
-    position: absolute;
+#custom-lang-menu {
+    position: fixed;
     top: 20px;
     right: 20px;
-    cursor: pointer; /* Indique que c'est cliquable */
-    z-index: 10;
+    z-index: 100;
+    font-family: Arial, sans-serif;
+}
+
+/* Le bouton principal */
+#current-lang-btn {
+    background: white;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
     display: flex;
-    gap: 10px; /* Espace entre les deux drapeaux s'ils étaient affichés */
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Le style commun aux images de drapeaux */
-.lang-flag {
-    width: 30px; /* Ajustez la taille selon vos images */
+#current-lang-btn img, .lang-option img {
+    width: 20px;
     height: auto;
-    border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    transition: transform 0.2s; /* Petit effet au survol */
+    border-radius: 2px;
 }
 
-.lang-flag:hover {
-    transform: scale(1.1); /* S'agrandit légèrement au survol */
+/* Le menu caché qui va s'ouvrir */
+#lang-options {
+    display: none; /* Caché par défaut */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
 }
 
-/* --- LE MÉCANISME DE MASQUAGE --- */
-
-/* 1. Par défaut (mode français) : on cache les textes anglais et le drapeau UK */
-.lang-en, #flag-uk {
-    display: none;
+/* Quand le menu est ouvert via JS */
+#lang-options.show {
+    display: block;
 }
 
-/* 2. Si la page passe en mode anglais (body.en) : on cache les textes français... */
-body.en .lang-fr {
-    display: none;
+/* Les lignes à l'intérieur du menu */
+.lang-option {
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-/* 3. Et on affiche les textes anglais... */
-body.en .lang-en {
-    display: inline;
+.lang-option:hover {
+    background-color: #f0f0f0;
 }
 
-/* 4. ...et on gère l'affichage des drapeaux (la date est toujours 'static' ou 'absolute' selon votre méthode précédente) */
-body.en #flag-fr {
-    display: none; /* Cache le drapeau français en mode anglais */
+/* --- LE MÉCANISME DE MASQUAGE DES TEXTES DU CV (Ne change pas) --- */
+.lang-en, .lang-de { display: none; }
+.lang-fr { display: inline; }
+body.en .lang-fr, body.en .lang-de { display: none; }
+body.en .lang-en { display: inline; }
+body.de .lang-fr, body.de .lang-en { display: none; }
+body.de .lang-de { display: inline; }
+
+/* --- 7. BOUTON REMONTER EN HAUT --- */
+
+#scroll-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; /* Placé en bas à gauche */
+    background-color: rgba(0, 86, 179, 0.4); /* Le 0.4 règle la transparence (40% visible) */
+    color: white;
+    border: none;
+    border-radius: 50%; /* Rend le bouton parfaitement rond */
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease; /* Rend les animations fluides */
+    display: none; /* On le cache par défaut quand on est tout en haut */
 }
 
-body.en #flag-uk {
-    display: block; /* Affiche le drapeau anglais en mode anglais */
+/* Effet quand on passe la souris dessus */
+#scroll-top-btn:hover {
+    background-color: rgba(0, 86, 179, 1); /* Devient 100% opaque (bleu normal) */
+    transform: translateY(-3px); /* Petit effet de soulèvement sympa */
 }
 
-
-/* --- 7. RESPONSIVE (TÉLÉPHONE) --- */
+/* --- 8. RESPONSIVE (TÉLÉPHONE) --- */
 @media screen and (max-width: 768px) {
     .container {
         margin: 10px;
