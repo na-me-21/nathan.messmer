@@ -436,4 +436,26 @@ body.de .lang-de { display: inline; }
     .sidebar-section.ouverte p {
         display: block;
     }
+    /* --- GESTION DES MENUS ACCORDÉONS SUR MOBILE --- */
+    
+    /* 1. On cache les listes par défaut sur téléphone */
+    .sidebar-section ul {
+        display: none; 
+        margin-top: 15px;
+    }
+
+    /* 2. Quand le JS ajoute la classe 'open', on l'affiche ! */
+    .sidebar-section ul.open {
+        display: block; 
+    }
+
+    /* 3. Optionnel : si vous voulez que le petit '+' devienne un '-' quand c'est ouvert */
+    .sidebar-section h3::after {
+        content: '+';
+        float: right;
+    }
+    
+    .sidebar-section h3.active::after {
+        content: '-';
+    }
 }

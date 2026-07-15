@@ -628,6 +628,21 @@
                 optionsMenu.classList.remove('show');
             }
         });
+        // --- CODE ACCORDÉON (TÉLÉPHONE) - MÉTHODE ROBUSTE ---
+        const accordionHeaders = document.querySelectorAll('.sidebar-section h3');
+
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', function() {
+                // Ajoute ou enlève la classe "active" sur le titre (pour changer le + en -)
+                this.classList.toggle('active');
+                
+                // Cible la liste juste en dessous et lui ajoute/enlève la classe "open"
+                const content = this.nextElementSibling;
+                if(content) {
+                    content.classList.toggle('open');
+                }
+            });
+        });
         // --- CODE POUR LE BOUTON REMONTER ---
         const scrollTopBtn = document.getElementById('scroll-top-btn');
 
@@ -647,6 +662,8 @@
                 behavior: 'smooth' /* Le fameux défilement doux ! */
             });
         });
+        
     </script>
+    
     </body>
 </html>
