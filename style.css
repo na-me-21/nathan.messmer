@@ -18,7 +18,7 @@ body {
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f9;
+    background-color: #deeeff;
     color: #333;
     line-height: 1.6;
 }
@@ -28,7 +28,7 @@ body {
     width: 90%;         
     max-width: 1100px;   
     margin: 40px auto;   
-    background: #fff;
+    background: #ffffff;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     border-radius: 8px;
     overflow: hidden; /* Important pour les coins arrondis */
