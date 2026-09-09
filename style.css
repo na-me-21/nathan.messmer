@@ -74,6 +74,10 @@ body {
     text-transform: uppercase;
 }
 
+.header-p {
+    text-align: justify;
+}
+
 .header-text h2 {
     font-weight: 300;
     color: #666;
@@ -320,6 +324,10 @@ body.de .lang-de { display: inline; }
         padding: 20px;
     }
 
+    .header-p{
+        text-align:justify;
+    }
+
     .header-photo {
         padding-top: 30px;
     }
@@ -351,7 +359,7 @@ body.de .lang-de { display: inline; }
 
     /* 2. Annule la justification du texte de présentation pour le centrer */
     p {
-        text-align: justify;
+        text-align: center;
     }
 
     /* 3. Ramène les listes et les puces vers le centre */
