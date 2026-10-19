@@ -317,6 +317,7 @@ body.de .lang-de { display: inline; }
     /* On empile tout verticalement */
     .top-header, .cv-body {
         flex-direction: column;
+        font-size: 14px;
     }
 
     .header-photo, .header-text, .sidebar, .main-content {
